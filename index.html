@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="[VUESTRO NOMBRE]">
+    <meta name="description" content="Calculadora geodésica que permite hacer la transformación de coordenadas geográficas en linea">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://www.icgc.cat/bundles/microblauicgc/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>Mi calculadora geodésica</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.6.3/proj4.min.js" crossorigin="anonymous"></script>
+    <link type="text/css" href="css/estilos.css" rel="stylesheet">
+    <script src="js/script.js" defer></script>
+    </head>
+<body>
+    <header>                   
+        <a href="https://www.uab.cat/es/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Logo_uab.png" alt="UAB" style="height: 100px; display:block;" ></a></th>
+        <h1>Mi calculadora geodésica</h1></th>
+    </header>
+    
+    <main>
+        <div>
+            <table align="center">
+                <tr height=60px>
+                    <th colspan="2"><label for="origen">Sistema de referencia de origen</label></th>
+                    <th><label for="destino">Sistema de referencia de destino</label></th>
+                </tr>
+                
+                <tr height=50px align="center">
+                    <td colspan="2">
+                        <select id="origen">
+                            <option value="EPSG:4326">EPSG:4326</option> 
+                            <option value="EPSG:3857">EPSG:3857</option>
+                            <option value="EPSG:25829">EPSG:25829</option>
+                            <option value="EPSG:25831">EPSG:25831</option>
+                            <option value="EPSG:23031">EPSG:23031</option>
+                            
+                        </select>
+                    </td>
+                    <td class="linea">
+                        <select id="destino">
+                            <option value="EPSG:4326">EPSG:4326</option> 
+                            <option value="EPSG:3857">EPSG:3857</option>
+                            <option value="EPSG:25829">EPSG:25829</option>
+                            <option value="EPSG:25831">EPSG:25831</option>
+                            <option value="EPSG:23031">EPSG:23031</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr height=40px align="center">
+                    <td><label for="lat"><strong>Latitud</strong></label></td>
+                    <td><label for="lng"><strong>Longitud</strong></label></td>
+                    <td class="linea"><label for="lng"><strong>Respuesta</strong></label></td>
+                                       
+                </tr>                
+
+                <tr height=60px align="center">
+                    <td><input type="text" id="lat"></td>
+                    <td><input type="text" id="lng"></td>
+                    <td class="linea" colspan="2"><div id="respuesta"></div></td>                    
+                </tr>
+                <tr height=200px>
+                    <td colspan="2" align="center"><textarea name="textarea" rows="8" cols="40" id="coords"></textarea></td>                    
+                    <td class="linea"></td>
+                </tr>
+                <tr height=40px align="center">
+                    <td colspan="2"><button class="btn-tranformar">Transformar coordenadas</button></td>
+                    <td class="linea"><button class="boton2">Enviar respuesta</button></td>
+                </tr>
+                </table>
+        </div>
+        <aside>
+            <ul>
+                <li><a href="https://epsg.io/4326" title="WGS 84 -- WGS84 - World Geodetic System 1984, used in GPS" target="_blank" rel="noopener noreferrer">EPSG:4326</a></li>
+                <li><a href="https://epsg.io/3857" title="WGS 84 / Pseudo-Mercator -- Spherical Mercator, Google Maps, OpenStreetMap, Bing, ArcGIS, ESRI" target="_blank" rel="noopener noreferrer">EPSG:3857</a></li>
+                <li><a href="https://epsg.io/25829" title="ETRS89 / UTM zone 29N" target="_blank" rel="noopener noreferrer">EPSG:25829</a></li>
+                <li><a href="https://epsg.io/25831" title="ETRS89 / UTM zone 31N" target="_blank" rel="noopener noreferrer">EPSG:25831</a></li>
+                <li><a href="https://epsg.io/23031" title="ED50 / UTM zone 31N" target="_blank" rel="noopener noreferrer">EPSG:23031</a></li>
+            </ul>
+        </aside>
+    </main>
+    <footer>©Copyright 2020 de nadie. Ningún derecho reservado.</footer>
+</body>
+</html>

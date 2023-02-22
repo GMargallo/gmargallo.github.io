@@ -1,0 +1,125 @@
+:root {
+    --light-blue: #8ecae6ff;
+    --blue-green: #219ebcff;
+    --prussian-blue: #023047ff;
+    --honey-yellow: #ffb703ff;
+    --orange: #fb8500ff;
+}
+
+html {
+    font-family: "Roboto", sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/California_island_Vinckeboons5.jpg/2560px-California_island_Vinckeboons5.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode:color-dodge;    
+    background-color: rgba(255, 255, 255, 0.75);
+    background-position: 0px -130px
+}
+
+header {
+    display: flex;
+    
+    justify-content: space-around;
+    align-items:center;
+        
+    
+}
+
+header > h1 {
+    color: var(--prussian-blue);
+}
+
+
+/* text-align per centrar el text del footer */
+
+footer {
+    color: var(--blue-green);
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex: auto;
+    justify-content: space-around;    
+
+}
+
+main > div {
+    flex: auto;    
+}
+
+#origen, #destino {
+    color: var(--orange);
+}
+
+aside {
+    min-width: 150px;
+    flex: 1;
+    border-left: 2px solid var(--prussian-blue);
+}
+
+aside > ul > li {
+    color: var(--honey-yellow);
+}
+
+.btn-tranformar {
+    background-color: var(--orange);
+    color: var(--prussian-blue);
+}
+
+
+/*Els dos seguents canvia l'estil dels botons */
+
+.boton1 {
+    background-color: chartreuse;
+}
+
+.boton2 {
+    background-color: rgb(67, 53, 255);
+    color: rgb(255, 255, 255);
+}
+
+
+/* Aquesta part treu el subratllat dels links */
+
+a {
+    text-decoration: none;
+    
+}
+
+img {
+    bottom: -1px;
+}
+
+main > div >table {
+
+    width: 100%;
+    border-spacing: 0px;
+}
+
+.linea {
+    border-left: 2px solid var(--prussian-blue);
+}
+
+.linea_dreta {
+    border-right: 2px solid var(--prussian-blue);
+}
+
+.linea_sota{
+    border-bottom: 0px;
+}
